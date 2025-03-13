@@ -2,7 +2,7 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/fed25_03/system" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fed25_03_test02/system" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="pfllib" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

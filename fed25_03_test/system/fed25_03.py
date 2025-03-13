@@ -9,7 +9,7 @@ import os
 import argparse
 import torchvision
 
-from flcore.servers.server_fed25_03 import Server_fed03
+from flcore.servers.server_fed25_03_simplified import Server_fed03
 from flcore.trainmodel.resnet8 import ResNet8
 
 from flcore.trainmodel.transformer import *

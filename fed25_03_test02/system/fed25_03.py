@@ -9,7 +9,7 @@ import os
 import argparse
 import torchvision
 
-from flcore.servers.server_fed25_03 import Server_fed03
+from flcore.servers.server_fed25_03_simplified import Server_fed03
 from flcore.trainmodel.resnet8 import ResNet8
 
 from flcore.trainmodel.transformer import *
@@ -163,9 +163,9 @@ if __name__ == "__main__":
     # 动态掩码生成参数
     parser.add_argument('--alpha_min', type=float, default=0.1,
                         help="初始个性化参数比例阈值下限")
-    parser.add_argument('--alpha_max', type=float, default=0.8,
+    parser.add_argument('--alpha_max', type=float, default=0.7,
                         help="最终个性化参数比例阈值上限")
-    parser.add_argument('--alpha_k', type=float, default=2.0,
+    parser.add_argument('--alpha_k', type=float, default=0.5,
                         help="阈值增长曲线的曲率系数（k>1时加速增长）")
 
     # 扩散模型训练参数
