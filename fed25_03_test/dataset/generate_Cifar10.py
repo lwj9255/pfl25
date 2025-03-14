@@ -26,6 +26,7 @@ def generate_dataset(dir_path, num_clients, niid, balance, partition):
     config_path = dir_path + "config.json"  # 配置文件路径
     train_path = dir_path + "train/"  # 训练数据存储路径
     test_path = dir_path + "test/"  # 测试数据存储路径
+    raw_data_dir = "../../data/Cifar10/rawdata/" # 原始数据位置
 
     # 检查是否已经生成过数据，如果已经生成，则跳过
     if check(config_path, train_path, test_path, num_clients, niid, balance, partition):
@@ -38,10 +39,10 @@ def generate_dataset(dir_path, num_clients, niid, balance, partition):
 
     # 下载并加载 CIFAR-10 数据集
     trainset = torchvision.datasets.CIFAR10(
-        root=dir_path+"rawdata", train=True, download=True, transform=transform
+        root=raw_data_dir, train=True, download=True, transform=transform
     )
     testset = torchvision.datasets.CIFAR10(
-        root=dir_path+"rawdata", train=False, download=True, transform=transform
+        root=raw_data_dir, train=False, download=True, transform=transform
     )
 
     # 加载数据到 DataLoader 中，便于后续的批处理操作
